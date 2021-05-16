@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ajax上传图片</title>
+    <meta charset="utf-8">
+    <script src="https://www.jq22.com/jquery/jquery-3.3.1.js"></script>
+</head>
+<body>
+    <h1>Ajax上传图片</h1>
+    <!-- 表单 -->
+    <form id="form" enctype="multipart/form-data">
+        <input type="file" id="fileAttach" name="file"/>
+        <input type="button" onclick="upload()" value="上传"/>
+    </form>
+
+    <!-- 显示结果 -->
+    <h2 id="upload-result"></h2>
+
+    <!-- 显示图片 -->
+    <div id="imgdiv"></div>
+
+    <!-- Ajax上传 -->
+    <script>
+        function upload(){
+            var form = new FormData(document.getElementById("form"));
+            
+            $.ajax({
+                url:"upload.php",
+                type:"post",
+                data:form,
+                cache: false,
+                processData: false,
+                contentType: false,
+                success:function(data){
+                    if (data.res == "400") {
+                        $("#upload-result").text("上传成功");
+                        $("#imgdiv").html("<img src=\"upload/"+data.path+"\"/>");
+                    }else if (data.res == "403") {
+                        $("#upload-result").text("格式不对");
+                    }else if (data.res == "404") {
+                        $("#upload-result").text("上传错误");
+                    }
+                    
+                },
+                error:function(data){
+                    alert("上传失败")
+                }
+            })
+        }
+    </script>
+</body>
+</html>

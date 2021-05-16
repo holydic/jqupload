@@ -1,0 +1,63 @@
+HTML5上传图片文件（含拖拽、预览、上传、美化） - SegmentFault 思否: https://segmentfault.com/a/1190000004924160?utm_source=sf-similar-article
+前端上传前预览文件 image、text、json、video、audio - SegmentFault 思否: https://segmentfault.com/a/1190000022597533?utm_source=sf-similar-article
+
+
+Jquery图片上传组件，支持多文件上传 - 大自然的流风 - 博客园: https://www.cnblogs.com/zdz8207/p/Jquery-fileupload-multiple.html
+使用jquery插件ajaxfileupload一次上传多个文件，示例_SimminonGarcia的博客-CSDN博客: https://blog.csdn.net/weixin_34080951/article/details/86004758
+jQuery FileUpload 插件 - SegmentFault 思否: https://segmentfault.com/a/1190000010072330
+Thinkphp使用jQuery File Upload异步上传图片实例教程（1）：上传单张图片 - SegmentFault 思否: https://segmentfault.com/a/1190000008327885?utm_source=sf-similar-article
+批量上传图片(jQuery-File-Upload使用) - archer-wong - 博客园: https://www.cnblogs.com/redirect/p/10066548.html
+使用 jquery-file-upload 插件实现图片上传功能（方式二）_@必意玲-CSDN博客_jquery上传图片插件: https://blog.csdn.net/qq_36410795/article/details/87471442
+jQuery File Upload的使用 - yuf_ricky - 博客园: https://www.cnblogs.com/rickyctbu/p/9920427.html
+js ajax请求进度条 - 简书: https://www.jianshu.com/p/73a0391ca80b
+jQuery File Upload使用教程 - 简书: https://www.jianshu.com/p/9841ac6078b5
+js ajax请求进度条 - 简书: https://www.jianshu.com/p/73a0391ca80b
+jQuery-File-Upload 文件上传插件的使用 - D大调协奏曲的个人空间 - OSCHINA - 中文开源技术交流社区: https://my.oschina.net/zy223344/blog/859634
+jQuery File Upload的使用 - yuf_ricky - 博客园: https://www.cnblogs.com/rickyctbu/p/9920427.html
+
+Suggestions for multiple files upload in form: https://groups.google.com/g/web2py/c/XpnUb2_MaRc
+[web2py:30869] Multiple file upload: https://web2py.narkive.com/937ZCkSa/web2py-30869-multiple-file-upload
+Manual Uploads | Article | Web2py Slices - Recipes, Tutorials, Code, Questions: http://www.web2pyslices.com/slice/show/1504/manual-uploads
+Ajax file upload | Recipe | Web2py Slices - Recipes, Tutorials, Code, Questions: http://www.web2pyslices.com/slice/show/1439/ajax-file-upload
+Add an upload field in wysiwyg editor | Recipe | Web2py Slices - Recipes, Tutorials, Code, Questions: http://www.web2pyslices.com/slice/show/1613/add-an-upload-field-in-wysiwyg-editor
+In 10 minutes: [Web2py] Implement multiple files upload using AJAX with jQuery-file-upload plugin in less than 10 minutes: http://in10min.blogspot.com/2013/04/web2py-implement-multiple-files-upload.html
+[web2py] Multiple File Upload Form Works! - Need Help with validation for multiple files: https://www.mail-archive.com/web2py@googlegroups.com/msg126034.html
+Multiple files upload: https://groups.google.com/g/web2py/c/Ns9YclKUL5g
+File uploading in web2py - Stack Overflow: https://stackoverflow.com/questions/26987446/file-uploading-in-web2py
+python - File upload at web2py - Stack Overflow: https://stackoverflow.com/questions/38001245/file-upload-at-web2py
+sql - web2py upload with original filename - Stack Overflow: https://stackoverflow.com/questions/8008213/web2py-upload-with-original-filename
+python 2.7 - How to attach an uploaded file for e-mailing in web2py - Stack Overflow: https://stackoverflow.com/questions/47112137/how-to-attach-an-uploaded-file-for-e-mailing-in-web2py
+insert and delete +ajax + show process | Recipe | Web2py Slices - Recipes, Tutorials, Code, Questions: http://www.web2pyslices.com/slice/show/1432/insert-and-delete-ajax-show-process
+Upload Progress in web2py | Recipe | Web2py Slices - Recipes, Tutorials, Code, Questions: http://www.web2pyslices.com/slice/show/1337/upload-progress-in-web2py
+Quick and dirty multi file ajax file upload | Recipe | Web2py Slices - Recipes, Tutorials, Code, Questions: http://www.web2pyslices.com/slice/show/1428/quick-and-dirty-multi-file-ajax-file-upload
+Upload Progress in web2py  http://www.web2pyslices.com/slice/show/1337/upload-progress-in-web2py
+insert and delete +ajax + show process  http://www.web2pyslices.com/slice/show/1432/insert-and-delete-ajax-show-process
+javascript - Can upload form submit wait for file processing complete? - Stack Overflow: https://stackoverflow.com/questions/11031445/can-upload-form-submit-wait-for-file-processing-complete
+
+<script src="__PUBLIC__/js/jquery.ui.widget.js"></script>
+<script src="__PUBLIC__/js/jquery.iframe-transport.js"></script>
+<script src="__PUBLIC__/js/jquery.fileupload.js"></script>
+
+<input type="file" name="files" id="fileupload" data-url="/attachment/upload" multiple="multiple"/>
+<input id="fileupload" type="file" name="files[]" data-url="server/php/" multiple>
+
+$('#fileupload').fileupload();
+
+$(function () {
+    $('#fileupload').fileupload({
+    	add: function(e, data) {
+        },
+        dataType: 'json',
+        singleFileUploads: false,
+    });
+});
+
+
+
+10个JavaScript图像处理库，收藏好留备用 - 知乎: https://zhuanlan.zhihu.com/p/136643128
+9 个顶级的JavaScript图表库 - html中文网: https://www.html.cn/web/javascript/15015.html
+6 款 Javascript 的图像处理库 - SegmentFault 思否: https://segmentfault.com/a/1190000008670319
+[译] 2020 十大 JavaScript 图像处理库: https://juejin.cn/post/6844904147993657358
+AlloyImage: http://alloyteam.github.io/AlloyImage/
+jQuery-File-Upload 文件上传插件的使用 - D大调协奏曲的个人空间 - OSCHINA - 中文开源技术交流社区: https://my.oschina.net/zy223344/blog/859634
+jQuery File Upload的使用 - yuf_ricky - 博客园: https://www.cnblogs.com/rickyctbu/p/9920427.html

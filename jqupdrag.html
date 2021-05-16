@@ -1,0 +1,73 @@
+<div class="unload" draggable="true">
+    <svg class="icon" aria-hidden="true">
+        <use xlink:href="#iconLocalUpload"></use>
+    </svg>
+    <div class="load-text">将文件拖到此处，或
+        <span >点击上传</span>
+    </div>
+    <input type="file"  id="">
+</div>
+<div>
+    <p  class='view-img'>预览</p>
+</div>
+<script>
+let ipFile = document.getElementsByTagName('input')[0];
+let unload = document.querySelector('.unload');
+let lt = document.querySelector('.load-text');
+
+let p = document.querySelector('.view-im');
+
+unload.addEventListener("dragenter", function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+}, false);
+
+unload.addEventListener("dragover", function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+}, false);
+
+unload.addEventListener("dragleave", function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+}, false);
+
+// 托拽实现
+unload.addEventListener("drop", function (e) {
+    var df = e.dataTransfer;
+    for(let i = 0; i < df.files.length; i++) {
+        var item = df.items[i];
+        var file = item.getAsFile();
+        var fileReader = new FileReader();
+        fileReader.readAsDataURL(file);
+        fileReader.onload = function(){
+            // 获取得到的结果
+            var data = this.result;
+            dom.insertAdjacentHTML('beforeend',`<img src=${data} width='100%'>`);
+        }
+    }
+    e.preventDefault();
+    e.stopPropagation();
+},false)
+
+lt.addEventListener('click',function(e){
+    ipFile.click();
+},false)
+
+// file 事件
+ipFile.addEventListener('change',function(e){
+    for(let i = 0; i < this.files.length; i++) {
+        let file = this.files[i];
+        var fileReader = new FileReader();
+        fileReader.readAsDataURL(file);
+        fileReader.onload = function(){
+            // 获取得到的结果
+            var data = this.result;
+            p.insertAdjacentHTML('beforeend',`<img src=${data} width='100%'>`);
+        }
+    }
+},false)
+
+function toodFile(df,dom){
+}
+</script>

@@ -1,0 +1,14 @@
+第一种： 把 input file 样式设置display:none; 隐藏, 或者 设置透明度 opacity设置为0，外层用div包裹，就实现了美化功能。然后用一个好看的按钮代替点击，之后，在js里调用调用这个input的点击事件。
+  <button type="button" class="btn btn-primary">点击</button>
+  <input type="file"  id="" style='display:none;'>
+  <script> 
+    let btn = document.querySelector('.btn');
+    let ipFile = document.getElementsByTagName('input')[0];
+   
+    btn.addEventListener("click", function (e) {
+      inFile.click();
+    }, false);
+  </script>
+第二种方法：，使用 label元素 与 input file控件关联,然后隐藏 input。也是一样的。只不过不用调用方法了。
+<label class="ui_button ui_button_primary" for="xFile">上传文件</label>
+<form><input type="file" id="xFile" style="display:none;"></form>
